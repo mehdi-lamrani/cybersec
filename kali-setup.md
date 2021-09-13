@@ -5,5 +5,6 @@ sudo nano /etc/xrdp/xrdp.ini
     max_bpp=16
 sudo nano /etc/X11/Xwrapper.config
         allowed_users=ec2-user
-service xrdp start
+sudo service xrdp start
+sudo passwd kali 
 ```
