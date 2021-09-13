@@ -60,3 +60,13 @@ Completed Connect Scan at 07:20, 2.53s elapsed (1000 total ports)
 Initiating Service scan at 07:20
 @@Scanning 9 services on ip-10-10-18-88.ec2.internal (10.10.18.88)@@
 ```
+
+- Prise en main de Metasploit
+
+msfconsole -h
+
+- Vulnerabilité à exploiter : 
+
+    https://en.wikipedia.org/wiki/EternalBlue
+    
+    
