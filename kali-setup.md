@@ -7,11 +7,18 @@ sudo nano /etc/X11/Xwrapper.config
         allowed_users=ec2-user
 sudo service xrdp start
 sudo passwd kali 
+```
+- Connectez-vous en RDP à votre poste d'attaque Kali
 
+- Pingez à nouveau votre Machine THM
+
+```
 sudo apt install openvpn
 ifconfig
 sudo openvpn xixi.blue.ovpn&
 ifconfig
-
-difference ?
 ```
+
+- Quelle difference remarquez-vous dans ifconfig?
+
+- Pingez à nouveau votre Machine THM
