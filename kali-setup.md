@@ -189,7 +189,7 @@ Exploit target:
 set _OPTION_ _VALUE_
 ```
 
-:eyeglasses: Hint : Le host local doit être adapté à l'interface créée par le VPN
+:mushroom: Hint : Le host local doit être adapté à l'interface créée par le VPN
 
 
 - Préparer le payload pour enclencher un reverse shell en tcp
