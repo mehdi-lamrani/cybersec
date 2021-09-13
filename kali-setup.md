@@ -373,4 +373,7 @@ Jon:1000:aad3b435b51404eeaad3b435b51404ee:ffb43f0de35be4d9917ac0cc8ad57f8d:::
  - Récupérer le 2ème hash de Jon et essayer de le reverser avec crakstation.com ou l'utilitaire John the Ripper sur Kali
 
  
- 
+ - Récherche des fichiers flag plantés dans la machine cible
+```
+search -f flag*.txt
+```
