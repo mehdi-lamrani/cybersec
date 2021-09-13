@@ -13,18 +13,26 @@ sudo passwd kali
 ```
 - Connectez-vous en RDP à votre poste d'attaque Kali
 
+```
+ifconfig
+```
+
 - Pingez votre Machine THM
 
 ```
 sudo apt install openvpn
-ifconfig
+
 sudo openvpn xixi.blue.ovpn&
+
 ifconfig
 ```
 
 - Quelle difference remarquez-vous dans ifconfig?
 
 - Pingez à nouveau votre Machine THM
+
+- Scannez la machine cible pour d'éventuelles vulenératibilité
+
 ```
 nmap -sV -vv --script vuln TARGET_IP
 ```
