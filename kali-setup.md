@@ -30,8 +30,8 @@ nmap -sV -vv --script vuln TARGET_IP
 ```
 
 
-```bash
-Starting Nmap 7.91 ( https://nmap.org ) at 2021-09-13 07:20 UTC
+```diff
+@@Starting Nmap 7.91 ( https://nmap.org ) at 2021-09-13 07:20 UTC
 NSE: Loaded 149 scripts for scanning.
 NSE: Script Pre-scanning.
 NSE: Starting runlevel 1 (of 2) scan.
@@ -58,5 +58,5 @@ Discovered open port 49153/tcp on 10.10.18.88
 Discovered open port 49154/tcp on 10.10.18.88
 Completed Connect Scan at 07:20, 2.53s elapsed (1000 total ports)
 Initiating Service scan at 07:20
-Scanning 9 services on ip-10-10-18-88.ec2.internal (10.10.18.88)
+@@Scanning 9 services on ip-10-10-18-88.ec2.internal (10.10.18.88)
 ```
