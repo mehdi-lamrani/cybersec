@@ -13,7 +13,7 @@ sudo passwd kali
 ```
 - Connectez-vous en RDP à votre poste d'attaque Kali
 
-- Pingez à nouveau votre Machine THM
+- Pingez votre Machine THM
 
 ```
 sudo apt install openvpn
