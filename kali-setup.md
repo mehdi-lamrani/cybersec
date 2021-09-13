@@ -1,3 +1,6 @@
+- Connectez-vous en SSH à votre poste d'attaque Kali
+  (crédentiels fournis par l'instructeur)
+
 ```
 sudo apt-get update
 sudo apt-get install xrdp lxde-core lxde tigervnc-standalone-server -y
