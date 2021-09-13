@@ -61,12 +61,42 @@ Initiating Service scan at 07:20
 @@Scanning 9 services on ip-10-10-18-88.ec2.internal (10.10.18.88)@@
 ```
 
-- Prise en main de Metasploit
+- Les ports ouverts nous renseignent sur le type d'applications qui tournent
 
-msfconsole -h
+https://www.upguard.com/blog/smb-port#:~:text=SMB%20is%20a%20network%20file,dialects%20that%20communicate%20over%20NetBIOS.
+
+- détecter les vulnerabilités potentielles de ce type
+
+```
+ls -al /usr/share/nmap/scripts | grep -e "smb"
+```
 
 - Vulnerabilité à exploiter : 
 
     https://en.wikipedia.org/wiki/EternalBlue
-    
-    
+
+```
+nmap -sS -Pn -p 445 10.10.18.88 --script smb-vuln-ms17-010.nse
+```
+
+```diff
+@@Host script results:@@
+| smb-vuln-ms17-010:
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+```
+
+- Prise en main de Metasploit
+
+msfconsole -h
