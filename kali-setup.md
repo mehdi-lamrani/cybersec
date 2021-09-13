@@ -65,7 +65,7 @@ Initiating Service scan at 07:20
 
 https://www.upguard.com/blog/smb-port#:~:text=SMB%20is%20a%20network%20file,dialects%20that%20communicate%20over%20NetBIOS.
 
-- détecter les vulnerabilités potentielles de ce type
+- Lister les vulnerabilités potentielles de ce type
 
 ```
 ls -al /usr/share/nmap/scripts | grep -e "smb"
@@ -74,6 +74,8 @@ ls -al /usr/share/nmap/scripts | grep -e "smb"
 - Vulnerabilité à exploiter : 
 
     https://en.wikipedia.org/wiki/EternalBlue
+
+- Vérifier le satut de la vulnérabilité sur la machine cible : 
 
 ```
 nmap -sS -Pn -p 445 10.10.18.88 --script smb-vuln-ms17-010.nse
